@@ -3,6 +3,7 @@ package mylib;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Locale;
+import java.util.Random;
 
 public class StringFun {
     public static String newWord;
@@ -68,5 +69,19 @@ public class StringFun {
             isValid = false;
         }
         return isValid;
+    }
+
+    public static String shuffle(String arg) {
+        Random random = new Random();
+        StringBuilder text = new StringBuilder(arg);
+        String res = "";
+
+        while(text.length() > 0) {
+            int num = random.nextInt(text.length());
+            res += text.charAt(num);
+            char c = text.charAt(num);
+            text.deleteCharAt(num);
+        }
+        return res;
     }
 }

@@ -1,6 +1,6 @@
 package mylib;
 
-public class Camelize {
+public class CamelizeTest {
     public static void main(String[] arg) {
 
         System.out.println(StringFun.camelize("Damian Tak"));
